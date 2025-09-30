@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>G Kalyan Raju — AI Solution Architect</title>
+  <meta name="description" content="Portfolio of G Kalyan Raju — AI Solution Architect with 14+ years of experience in AI/ML architecture, conversational AI, data engineering, and enterprise systems." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0d10; --panel:#12161b; --muted:#9aa4b2; --text:#e6edf3; --brand:#5dd6a0; --brand-2:#7aa2f7; --chip:#1b222a; --accent:#2a2f36; --ring: rgba(93,214,160,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0b0d10 0%,#0e1216 60%,#0b0d10 100%);color:var(--text);line-height:1.6}
+    a{color:var(--brand);text-decoration:none} a:hover{opacity:.9}
+    .container{max-width:1100px;margin:auto;padding:24px}
+    header{position:sticky;top:0;backdrop-filter:saturate(160%) blur(12px);background:rgba(11,13,16,.55);border-bottom:1px solid #1c222a;z-index:20}
+    .nav{display:flex;gap:14px;align-items:center;justify-content:space-between}
+    .nav .links{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid #27303a;background:linear-gradient(180deg,#161b21,#12161b);box-shadow:inset 0 1px 0 rgba(255,255,255,.03);color:var(--text);transition:.2s}
+    .btn:hover{transform:translateY(-1px);border-color:#334050}
+    .btn.brand{background:linear-gradient(180deg,#2a5647,#21483c);border-color:#2b6b56;color:#eafff6}
+    .btn.ghost{background:transparent}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;padding:32px 0}
+    .card{background:linear-gradient(180deg,#12161b,#101419);border:1px solid #1b222a;border-radius:16px;padding:22px;box-shadow:0 0 0 1px rgba(255,255,255,.02), 0 10px 30px rgba(0,0,0,.25)}
+    .title{font-size:clamp(28px,4.5vw,44px);line-height:1.15;margin:0 0 8px;font-weight:800}
+    .subtitle{margin:0;color:var(--muted)}
+    .chip{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;background:var(--chip);border:1px solid #26303a;font-size:12.5px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    h2{font-size:22px;margin:0 0 12px;padding-top:8px}
+    section{scroll-margin-top:86px;margin:28px 0}
+    .grid{display:grid;gap:16px}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .item-title{font-weight:700}
+    .bullets{margin:8px 0 0 0;padding-left:18px}
+    .bullets li{margin:6px 0}
+    .timeline{position:relative}
+    .timeline:before{content:"";position:absolute;left:12px;top:0;bottom:0;width:2px;background:#1f2630}
+    .role{position:relative;padding-left:36px}
+    .role:before{content:"";position:absolute;left:6px;top:10px;width:14px;height:14px;border-radius:50%;background:linear-gradient(180deg,#5dd6a0,#7aa2f7);box-shadow:0 0 0 6px rgba(93,214,160,.08)}
+    .muted{color:var(--muted)}
+    .mono{font-family:"JetBrains Mono",ui-monospace,Menlo,Monaco,Consolas,monospace}
+    .footer{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding:18px 0;color:var(--muted);border-top:1px solid #1c222a;margin-top:24px}
+    .nav a.link{padding:8px 10px;border-radius:10px;color:#c9d4df}
+    .nav a.link:hover{background:#151a21}
+    .pill{padding:6px 10px;border:1px solid #2a3340;border-radius:999px;background:#0f1318;color:#c9d4df}
+    .kbd{border:1px solid #2a3340;border-bottom-width:2px;background:#0e1216;border-radius:8px;padding:2px 6px}
+    .split{display:flex;gap:10px;flex-wrap:wrap}
+    .sr{position:absolute;left:-9999px}
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      .grid.cols-2{grid-template-columns:1fr}
+      .grid.cols-3{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="split">
+        <span class="pill">AI Solution Architect</span>
+        <span class="pill">14+ yrs</span>
+      </div>
+      <nav class="links" aria-label="Primary">
+        <a class="link" href="#summary">Summary</a>
+        <a class="link" href="#competencies">Skills</a>
+        <a class="link" href="#experience">Experience</a>
+        <a class="link" href="#education">Education</a>
+        <a class="link" href="#domains">Domains</a>
+        <a class="link" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero" id="summary">
+      <div class="card">
+        <h1 class="title">G Kalyan Raju</h1>
+        <p class="subtitle">AI Solution Architect • Conversational AI • Data & Platform Engineering</p>
+        <div style="height:12px"></div>
+        <p>
+          AI Solution Architect with <strong>14+ years</strong> of experience in designing and implementing enterprise-scale architectures,
+          data-driven applications, and AI-powered platforms. Skilled in building <strong>LLM-based solutions</strong>,
+          automation frameworks, and intelligent systems across cloud and on‑prem environments. Proven expertise in
+          AI integration, conversational agents, data pipelines, and analytics platforms, with strong leadership in
+          guiding cross‑functional teams and aligning technology with business strategy.
+        </p>
+        <div class="split" style="margin-top:14px">
+          <a class="btn brand" href="#contact" aria-label="Contact Kalyan">Get in touch</a>
+          <button class="btn" onclick="window.print()" aria-label="Print or save as PDF">Print / Save PDF</button>
+        </div>
+      </div>
+      <aside class="card" aria-label="Quick links">
+        <h2>Links</h2>
+        <div style="height:8px"></div>
+        <div class="grid">
+          <a class="btn" href="mailto:kalyan2642@gmail.com" title="Email">
+            <span>📧</span><span class="mono">kalyan2642@gmail.com</span>
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/kalyan-raju/" target="_blank" rel="noopener" title="LinkedIn">
+            <span>🔗</span><span>linkedin.com/in/kalyan-raju</span>
+          </a>
+          <a class="btn" href="https://github.com/kalyanraju" target="_blank" rel="noopener" title="GitHub">
+            <span>💻</span><span>github.com/kalyanraju</span>
+          </a>
+          <button class="btn ghost" onclick="copyEmail()" title="Copy email to clipboard">
+            <span>📋</span><span>Copy Email</span>
+          </button>
+        </div>
+        <div style="height:8px"></div>
+        <div class="chips">
+          <span class="chip">Open to Consulting</span>
+          <span class="chip">Remote / Hybrid</span>
+          <span class="chip">Architect • Mentor</span>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Core Competencies -->
+    <section id="competencies">
+      <div class="card">
+        <h2>Core Competencies</h2>
+        <div class="chips" style="margin-top:10px">
+          <span class="chip">LLMs • Fine‑tuning • Embeddings • Vector DBs</span>
+          <span class="chip">Chatbots • AI Voice Agents • Omnichannel</span>
+          <span class="chip">Data Pipelines • ETL • Validation • Observability</span>
+          <span class="chip">Azure AI • AWS AI/ML • GCP Vertex AI • Hybrid</span>
+          <span class="chip">Python • Node.js • TensorFlow • PyTorch • IaC</span>
+          <span class="chip">APIs • Microservices • Containers • CI/CD</span>
+          <span class="chip">Architecture Roadmaps • AI Adoption • Leadership</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <div class="card">
+        <h2>Professional Experience</h2>
+        <div class="timeline grid">
+
+          <div class="role">
+            <div class="split" style="justify-content:space-between;align-items:baseline">
+              <div class="item-title">Solution Architect — Kraft Software</div>
+              <div class="muted mono">Malaysia • 2024 – Present</div>
+            </div>
+            <ul class="bullets">
+              <li>Designed AI‑powered product architectures, integrating LLMs and analytics engines into enterprise platforms.</li>
+              <li>Led adoption of conversational AI and voice agents for customer‑facing applications.</li>
+              <li>Guided data pipeline design and capacity planning to support real‑time AI workloads.</li>
+              <li>Defined AI best practices and architecture governance across multiple business units.</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <div class="split" style="justify-content:space-between;align-items:baseline">
+              <div class="item-title">Technology Architect — MCA Group</div>
+              <div class="muted mono">Germany • 2022 – Present</div>
+            </div>
+            <ul class="bullets">
+              <li>Architected enterprise AI solutions including intelligent automation, predictive analytics, and data validation systems.</li>
+              <li>Managed infra for LLM fine‑tuning, vector search, and ML model deployment.</li>
+              <li>Established AI knowledge bases and documentation standards to accelerate adoption.</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <div class="split" style="justify-content:space-between;align-items:baseline">
+              <div class="item-title">Founder & CTO — Rise Inc | Schemax Expert Technocrafts | Anny Tech</div>
+              <div class="muted mono">2011 – 2022</div>
+            </div>
+            <ul class="bullets">
+              <li>Led technology strategy, architecture, and delivery for global customers.</li>
+              <li>Directed teams in enterprise connectivity, secure access frameworks, and collaboration systems.</li>
+              <li>Drove digital transformation from legacy voice/communications to cloud platforms.</li>
+              <li>Established monitoring, observability, and incident response for mission‑critical systems.</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <div class="split" style="justify-content:space-between;align-items:baseline">
+              <div class="item-title">Researcher — ISRO / Andhra University</div>
+              <div class="muted mono">2009 – 2010</div>
+            </div>
+            <ul class="bullets">
+              <li>Developed secure, efficient algorithms and pipelines for large‑scale datasets.</li>
+              <li>Delivered visualization and data exchange frameworks supporting national research.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <div class="card grid cols-2">
+        <div>
+          <h2>Education</h2>
+          <ul class="bullets">
+            <li><strong>M.Tech, Computer Science</strong> — JNTU Kakinada</li>
+            <li><strong>B.Tech, Computer Science</strong> — JNTU Kakinada</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Highlights</h2>
+          <ul class="bullets">
+            <li>Enterprise & Solution Architecture</li>
+            <li>Automation & Infrastructure‑as‑Code</li>
+            <li>SAAS / BAAS • Application Engineering</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Domains -->
+    <section id="domains">
+      <div class="card">
+        <h2>Technical Domains</h2>
+        <div class="grid cols-3" style="margin-top:8px">
+          <div class="card" style="padding:16px">
+            <div class="item-title">Enterprise Architecture</div>
+            <div class="muted">Roadmaps, capability maps, guardrails</div>
+          </div>
+          <div class="card" style="padding:16px">
+            <div class="item-title">Secure Connectivity</div>
+            <div class="muted">Zero‑trust, IAM, policy enforcement</div>
+          </div>
+          <div class="card" style="padding:16px">
+            <div class="item-title">Hybrid Cloud</div>
+            <div class="muted">Azure • AWS • GCP • On‑prem</div>
+          </div>
+          <div class="card" style="padding:16px">
+            <div class="item-title">Unified Communications</div>
+            <div class="muted">Voice, video, messaging</div>
+          </div>
+          <div class="card" style="padding:16px">
+            <div class="item-title">Contact Center Platforms</div>
+            <div class="muted">Omnichannel, bots, analytics</div>
+          </div>
+          <div class="card" style="padding:16px">
+            <div class="item-title">Firewall & Access Control</div>
+            <div class="muted">Segmentation, NAT/VPN, policies</div>
+          </div>
+          <div class="card" style="padding:16px">
+            <div class="item-title">Voice Integration</div>
+            <div class="muted">SIP, UCaaS, QoS strategies</div>
+          </div>
+          <div class="card" style="padding:16px">
+            <div class="item-title">Monitoring & Observability</div>
+            <div class="muted">SLOs, tracing, incident response</div>
+          </div>
+          <div class="card" style="padding:16px">
+            <div class="item-title">Automation & IaC</div>
+            <div class="muted">Ansible, Terraform, CI/CD</div>
+          </div>
+          <div class="card" style="padding:16px">
+            <div class="item-title">SaaS / BaaS</div>
+            <div class="muted">Multi‑tenant, platform patterns</div>
+          </div>
+          <div class="card" style="padding:16px">
+            <div class="item-title">Application Engineering</div>
+            <div class="muted">APIs, microservices, containers</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="card grid cols-2">
+        <div>
+          <h2>Contact</h2>
+          <p>Interested in AI architecture, conversational agents, or data platforms? I’m happy to discuss consulting and leadership engagements.</p>
+          <div class="split" style="margin-top:8px">
+            <a class="btn brand" href="mailto:kalyan2642@gmail.com">Email Me</a>
+            <a class="btn" target="_blank" rel="noopener" href="https://www.linkedin.com/in/kalyan-raju/">LinkedIn</a>
+            <a class="btn" target="_blank" rel="noopener" href="https://github.com/kalyanraju">GitHub</a>
+          </div>
+        </div>
+        <div>
+          <h2>Key Details</h2>
+          <ul class="bullets">
+            <li><strong>Name:</strong> G Kalyan Raju</li>
+            <li><strong>Email:</strong> <span class="mono">kalyan2642@gmail.com</span></li>
+            <li><strong>Location:</strong> India / Malaysia (remote‑friendly)</li>
+            <li><strong>Availability:</strong> Consulting • Architecture • Advisory</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> G Kalyan Raju — All rights reserved.</span>
+      <span class="muted">Built with ♥ in a single HTML file.</span>
+    </footer>
+  </main>
+
+  <script>
+    function copyEmail(){
+      const email = 'kalyan2642@gmail.com';
+      navigator.clipboard.writeText(email).then(()=>{
+        const b = document.createElement('div');
+        b.textContent = 'Email copied: ' + email;
+        b.setAttribute('role','status');
+        b.style.position='fixed';b.style.bottom='18px';b.style.right='18px';
+        b.style.padding='10px 12px';b.style.background='#0e1318';b.style.border='1px solid #2a3340';
+        b.style.borderRadius='10px';b.style.color='#cfe9dd';b.style.boxShadow='0 8px 24px rgba(0,0,0,.35)';
+        document.body.appendChild(b); setTimeout(()=>b.remove(),1800);
+      });
+    }
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
