@@ -56,9 +56,30 @@
       .grid.cols-2{grid-template-columns:1fr}
       .grid.cols-3{grid-template-columns:1fr}
     }
-  </style>
+    /* === Animated Skill Bars & Reveal === */
+    .skills{display:grid;gap:14px;margin-top:16px}
+    .skill{display:grid;gap:6px}
+    .skill .label{display:flex;justify-content:space-between;align-items:center}
+    .skill .label span{font-size:13px;color:var(--muted)}
+    .bar{position:relative;height:10px;background:#0f141a;border:1px solid #25303a;border-radius:999px;overflow:hidden}
+    .bar-fill{position:absolute;left:0;top:0;bottom:0;width:0%;background:linear-gradient(90deg,var(--brand),var(--brand-2));box-shadow:0 0 16px var(--ring);transition:width 1.2s cubic-bezier(.22,1,.36,1)}
+    .bar-fill.glow:after{content:"";position:absolute;right:-8px;top:50%;transform:translateY(-50%);width:14px;height:14px;border-radius:50%;background:var(--brand-2);filter:blur(6px);opacity:.6}
+
+    /* reveal on scroll */
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease}
+    .reveal.visible{opacity:1;transform:none}
+
+    /* header underline hover */
+    .nav .link{position:relative}
+    .nav .link:after{content:"";position:absolute;left:10px;right:10px;bottom:4px;height:2px;background:linear-gradient(90deg,var(--brand),var(--brand-2));transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+    .nav .link:hover:after{transform:scaleX(1)}
+
+    /* Top scroll progress */
+    #scrollProgress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--brand),var(--brand-2));z-index:50;box-shadow:0 0 12px var(--ring)}
+</style>
 </head>
 <body>
+  <div id="scrollProgress"></div>
   <!-- Header -->
   <header>
     <div class="container nav">
@@ -80,7 +101,8 @@
   <main class="container">
     <!-- Hero -->
     <section class="hero" id="summary">
-      <div class="card">
+      
+      <div class="card reveal">
         <h1 class="title">G Kalyan Raju</h1>
         <p class="subtitle">AI Solution Architect • Conversational AI • Data & Platform Engineering</p>
         <div style="height:12px"></div>
@@ -96,7 +118,7 @@
           <button class="btn" onclick="window.print()" aria-label="Print or save as PDF">Print / Save PDF</button>
         </div>
       </div>
-      <aside class="card" aria-label="Quick links">
+      <aside class="card reveal" aria-label="Quick links">
         <h2>Links</h2>
         <div style="height:8px"></div>
         <div class="grid">
@@ -124,7 +146,7 @@
 
     <!-- Core Competencies -->
     <section id="competencies">
-      <div class="card">
+      <div class="card reveal">
         <h2>Core Competencies</h2>
         <div class="chips" style="margin-top:10px">
           <span class="chip">LLMs • Fine‑tuning • Embeddings • Vector DBs</span>
@@ -135,12 +157,41 @@
           <span class="chip">APIs • Microservices • Containers • CI/CD</span>
           <span class="chip">Architecture Roadmaps • AI Adoption • Leadership</span>
         </div>
+
+        <!-- Animated skill bars -->
+        <div class="skills" aria-label="Skill proficiency bars">
+          <div class="skill" data-level="92">
+            <div class="label"><strong>LLM Solutions & RAG</strong><span>Expert</span></div>
+            <div class="bar"><div class="bar-fill"></div></div>
+          </div>
+          <div class="skill" data-level="90">
+            <div class="label"><strong>Conversational & Voice AI</strong><span>Advanced</span></div>
+            <div class="bar"><div class="bar-fill"></div></div>
+          </div>
+          <div class="skill" data-level="88">
+            <div class="label"><strong>Data Pipelines & Observability</strong><span>Advanced</span></div>
+            <div class="bar"><div class="bar-fill"></div></div>
+          </div>
+          <div class="skill" data-level="86">
+            <div class="label"><strong>Cloud & Hybrid AI Platforms</strong><span>Advanced</span></div>
+            <div class="bar"><div class="bar-fill"></div></div>
+          </div>
+          <div class="skill" data-level="84">
+            <div class="label"><strong>Automation & IaC</strong><span>Advanced</span></div>
+            <div class="bar"><div class="bar-fill"></div></div>
+          </div>
+          <div class="skill" data-level="82">
+            <div class="label"><strong>Enterprise Integration & CI/CD</strong><span>Advanced</span></div>
+            <div class="bar"><div class="bar-fill"></div></div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Experience -->
     <section id="experience">
-      <div class="card">
+      
+      <div class="card reveal">
         <h2>Professional Experience</h2>
         <div class="timeline grid">
 
@@ -199,7 +250,8 @@
 
     <!-- Education -->
     <section id="education">
-      <div class="card grid cols-2">
+      
+      <div class="card grid cols-2 reveal">
         <div>
           <h2>Education</h2>
           <ul class="bullets">
@@ -220,7 +272,8 @@
 
     <!-- Technical Domains -->
     <section id="domains">
-      <div class="card">
+      
+      <div class="card reveal">
         <h2>Technical Domains</h2>
         <div class="grid cols-3" style="margin-top:8px">
           <div class="card" style="padding:16px">
@@ -273,7 +326,8 @@
 
     <!-- Contact -->
     <section id="contact">
-      <div class="card grid cols-2">
+      
+      <div class="card grid cols-2 reveal">
         <div>
           <h2>Contact</h2>
           <p>Interested in AI architecture, conversational agents, or data platforms? I’m happy to discuss consulting and leadership engagements.</p>
@@ -315,6 +369,39 @@
       });
     }
     document.getElementById('year').textContent=new Date().getFullYear();
-  </script>
+      // Scroll reveal for cards
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('visible');
+          // animate skill bars when competencies card becomes visible
+          if(e.target.closest('#competencies')){
+            document.querySelectorAll('#competencies .skill').forEach(s=>{
+              const lvl = Math.min(100, Math.max(0, parseInt(s.dataset.level||'0',10)));
+              const fill = s.querySelector('.bar-fill');
+              requestAnimationFrame(()=>{
+                fill.style.width = lvl + '%';
+                fill.classList.add('glow');
+              });
+            });
+          }
+          observer.unobserve(e.target);
+        }
+      });
+    },{threshold:.15});
+
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+    // Top scroll progress bar
+    const sp = document.getElementById('scrollProgress');
+    const onScroll = () => {
+      const h = document.documentElement;
+      const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight);
+      sp.style.width = (scrolled * 100) + '%';
+    };
+    document.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+
+</script>
 </body>
 </html>
